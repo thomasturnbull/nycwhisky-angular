@@ -221,12 +221,14 @@ body {
 #events .date .day {
 	font-size: 0.8em;
 	font-weight: lighter;
+	text-transform: uppercase;
 }
 
 #events .date .month {
 	font-size: 1.8em;
 	font-weight: bold;
 	line-height: 0.9em;
+	text-transform: uppercase;
 }
 
 #events .date .dayofmonth {

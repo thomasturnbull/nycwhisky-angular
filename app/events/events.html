@@ -1,19 +1,25 @@
 
+<!-- TODO(Thomas): Figure out how to add class "newday" if repetition is a new day.
+                   Limit repetition of events to xx? -->
 <div ng-repeat="event in events" class="event" vocab="http://schema.org/" typeof="Event">
 	<div class="date" property="startDate" content="{{event.field_date}}">
 	  <!-- TODO(Thomas): All of the social date components. -->
-	  <div class="day">THISDAY</div>
-	  <div class="month">MON</div>
-	  <div class="dayofmonth">33</div>
+	  <div class="day">{{event.field_date_1}}</div>
+	  <div class="month">{{event.field_date_2}}</div>
+	  <div class="dayofmonth">{{event.field_date_3}}</div>
 	</div>
 	<div class="description">
 	  <h3 property="name"><a href="#" property="url">{{event.title}}</a></h3>
 	  <h4 property="location"  typeof="Place">{{event.field_location}}</h4>
-	  <!-- TODO(Thomas): Make cost more accurate, add time -->
-	  <span class="additional"><span class="time">X:00pm</span> \ <span class="cost" property="price">{{ event.field_cost }}</span></span>
-	  <!-- TODO(Thomas): Update to sanitize body, then add show/hide
+	  <span class="additional">
+	  	<span class="time">{{event.field_date_4}}</span> \ 
+	    <span class="cost" property="price">{{ event.field_cost }}</span>
+		<span class="cost" ng-show="event.field_free_event">Free</span>
+	  </span>
+
+	  <!-- TODO(Thomas): Update to sanitize body, then add show/hide. Add RSVP links, etc.
 	  https://docs.angularjs.org/api/ngSanitize/service/$sanitize -->
-	  <div class="description" ng-hide="true">{{event.body}}</div>
+	  <div class="description" ng-hide="true">{{event.field_event_details}}</div>
 	</div>
 	<!-- TODO(Thomas): All of the social links. -->
 	<div class="social">
