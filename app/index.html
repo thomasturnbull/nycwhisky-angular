@@ -6,27 +6,210 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
-  <meta name="description" content="">
+  <title>Whisky Tastings in New York: NYCWhisky.com</title>
+  <!-- TODO(Thomas): <meta name="description" content=""> -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
-  <link rel="stylesheet" href="app.css">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
   <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/events">events</a></li>
-    <li><a href="#/about">about</a></li>
-  </ul>
+  <div class="container" role="main">
+    <div class="c1" id="social">
+      <div class="networks">
+        <span><a href="http://twitter.com/nycwhisky">
+          <img src="images/twitter-top.png" width="30px" height="23px" title="Follow @NYCWhisky on Twitter" />
+        </a></span>
+        <span><a href="https://instagram.com/nycwhisky/">
+          <img src="images/instagram-top.png" width="26px" height="26px" title="Follow @NYCWhisky on Instagram" />
+        </a></span>
+        <span><a href="https://www.facebook.com/nycwhisky">
+          <img src="images/facebook-top.png" width="13px" height="26px" title="Like NYCWhisky on Facebook" />
+        </a></span>
+      </div>
+      <div class="form">
+       <form>
+         <input class="subscribe" type="submit" value="subscribe">
+         <input class="email" type="email" name="email" placeholder="SUBSCRIBE" />
+       </form>
+      </div>
+    </div>
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+    <div class="c2" id="search">
+      <!-- TODO(Thomas): Search -->
+    </div>
 
-  <div ng-view></div>
+    <div class="c3" id="header">
+      <h1><a href="http://nycwhisky.com">NYCWhisky</a></h1>
 
-  <div>Angular seed app: v<span app-version></span></div>
+      <div id="carousel">
+        <div class="carousel-nav" id="prev"><a href="#">previous</a></div></a>
+        <div class="carousel-content">
+          <img width="100%" src="temporarygraphics/oaksteel.jpg" />
+          <h3><a href="#">Wathen's Bourbon &amp; Bomberger's Whiskey</a></h3>
+          <h4>Oak &amp; Steel</h4>
+          <span class="additional">5:00pm</span>
+        </div>
+        <!-- TODO(Thomas): Add more content here. -->
+        <div class="carousel-nav" id="next"><a href="#">next</a></div></a>
+      </div>
+
+      <div id="instagram">
+        <h2><a href="https://instagram.com/nycwhisky/">FOLLOW US ON INSTAGRAM</a></h2>
+        <div id="widget">
+          <!-- INSTANSIVE WIDGET --><script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/08438a053d35b1bcceb98c61a25762a50654ab4e.html" id="instansive_08438a053d" name="instansive_08438a053d"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="c4" id="events">
+      <div ng-view></div>
+      <!-- TODO: Move the below to the directive. -->
+      <div class="event" vocab="http://schema.org/" typeof="Event">
+        <div class="date" property="startDate" content="2015-04-28T19:00">
+          <div class="day">TUESDAY</div>
+          <div class="month">APR</div>
+          <div class="dayofmonth">28</div>
+        </div>
+        <div class="description">
+          <h3 property="name"><a href="#" property="url">BARRELL BOURBON</a></h3>
+          <h4 property="location"  typeof="Place">Park Ave Liqour</h4>
+          <span class="additional"><span class="time">3:00pm</span> \ <span class="cost" property="price">$40</span></span>
+        </div>
+        <div class="social">
+          <div><a href="#" class="calendar" title="Save to calendar">Save to calendar</a></div>
+          <div><a href="#" class="twitter" title="Share on Twitter">Share on Twitter</a></div>
+          <div><a href="#" class="facebook" title="Share on Facebook">Share on Facebook</a></div>
+        </div>
+      </div>
+
+      <div class="event repeatday" vocab="http://schema.org/" typeof="Event">
+        <div class="date" property="startDate" content="2015-04-28T19:00">
+          <div class="day">TUESDAY</div>
+          <div class="month">APR</div>
+          <div class="dayofmonth">28</div>
+        </div>
+        <div class="description">
+          <h3 property="name"><a href="#" property="url">Jura whiskey and cheese pairing</a></h3>
+          <h4 property="location"  typeof="Place">Park Ave Liqour</h4>
+          <span class="time">3:00pm</span> \ <span class="cost" property="price">$40</span>
+        </div>
+        <div class="social">
+          <div><a href="#" class="calendar" title="Save to calendar">Save to calendar</a></div>
+          <div><a href="#" class="twitter" title="Share on Twitter">Share on Twitter</a></div>
+          <div><a href="#" class="facebook" title="Share on Facebook">Share on Facebook</a></div>
+        </div>
+      </div>
+
+      <div class="event newday" vocab="http://schema.org/" typeof="Event">
+        <div class="date" property="startDate" content="2015-04-28T19:00">
+          <div class="day">THURSDAY</div>
+          <div class="month">APR</div>
+          <div class="dayofmonth">29</div>
+        </div>
+        <div class="description">
+          <h3 property="name"><a href="#" property="url">Compass Box Whisky Vertical Tasting</a></h3>
+          <h4 property="location"  typeof="Place">Park Ave Liqour</h4>
+          <span class="time">3:00pm</span> \ <span class="cost" property="price">$40</span>
+        </div>
+        <div class="social">
+          <div><a href="#" class="calendar" title="Save to calendar">Save to calendar</a></div>
+          <div><a href="#" class="twitter" title="Share on Twitter">Share on Twitter</a></div>
+          <div><a href="#" class="facebook" title="Share on Facebook">Share on Facebook</a></div>
+        </div>
+      </div>
+
+      <div class="event newday" vocab="http://schema.org/" typeof="Event">
+        <div class="date" property="startDate" content="2015-04-28T19:00">
+          <div class="day">SUNDAY</div>
+          <div class="month">MAR</div>
+          <div class="dayofmonth">1</div>
+        </div>
+        <div class="description">
+          <h3 property="name"><a href="#" property="url">BARRELL BOURBON</a></h3>
+          <h4 property="location"  typeof="Place">Park Ave Liqour</h4>
+          <span class="time">3:00pm</span> \ <span class="cost" property="price">$40</span>
+        </div>
+        <div class="social">
+          <div><a href="#" class="calendar" title="Save to calendar">Save to calendar</a></div>
+          <div><a href="#" class="twitter" title="Share on Twitter">Share on Twitter</a></div>
+          <div><a href="#" class="facebook" title="Share on Facebook">Share on Facebook</a></div>
+        </div>
+      </div>
+
+      <div class="event newday" vocab="http://schema.org/" typeof="Event">
+        <div class="date" property="startDate" content="2015-04-28T19:00">
+          <div class="day">MONDAY</div>
+          <div class="month">AUG</div>
+          <div class="dayofmonth">28</div>
+        </div>
+        <div class="description">
+          <h3 property="name"><a href="#" property="url">BARRELL BOURBON</a></h3>
+          <h4 property="location"  typeof="Place">Park Ave Liqour</h4>
+          <span class="time">3:00pm</span> \ <span class="cost" property="price">$40</span>
+        </div>
+        <div class="social">
+          <div><a href="#" class="calendar" title="Save to calendar">Save to calendar</a></div>
+          <div><a href="#" class="twitter" title="Share on Twitter">Share on Twitter</a></div>
+          <div><a href="#" class="facebook" title="Share on Facebook">Share on Facebook</a></div>
+        </div>
+      </div>
+
+      <div><a href="#" id="load-more-events">LOAD MORE EVENTS</a></div>
+
+    </div>
+
+    <div class="c6" id="submitevent">
+      <div id="submiteventwrapper">
+        <h2>SUBMIT AN EVENT</h2>
+        <p>Are you arranging a tasting or whisky event in NYC? Use this form to let us know. All fields are required.</p>
+        <div class="name">
+          <label>Event Name</label>
+          <input type="text" />
+        </div>
+        <div class="location">
+          <label>Event Location</label>
+          <select>
+            <option>Astor Wine</option>
+            <option>BottleRocket</option>
+          </select>
+        </div>
+        <div class="date small">
+          <label>Date</label>
+          <input type="date" step=7 min=2015-03-08>
+        </div> 
+        <div class="time small">
+          <label>Time</label>
+          <input type="time" step=900>
+        </div>
+        <div class="contact">
+          <label>Contact</label>
+          <input type="text" />
+        </div>
+        <div class="description">
+          <label>Description</label>
+          <textarea></textarea>
+        </div>
+        <!-- TODO(Thomas): Some missing fields here. -->
+        <div class="submit">
+          I agree to the <a href="#">terms and conditions</a>
+          <button>SUBMIT</button>
+        </div>
+      </div>
+    </div>
+    <div class="c7" id="footer">
+      <span id="footer-navigation">
+        <a href="#">CONTACT US</a> | <a href="#">VENUE LIST</a> | <a href="#">PARTNERS</a> | <a href="#/about">ABOUT US</a>
+      </span>
+      <span id="copyright">&copy; COPYRIGHT NYCWHISKY</span>
+    </div>
+  </div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -36,6 +219,7 @@
   <script src="app.js"></script>
   <script src="about/about.js"></script>
   <script src="events/events.js"></script>
+  <!-- TODO: Remove the version & interpolate stuff -->
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>

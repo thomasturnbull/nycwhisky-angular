@@ -1,0 +1,398 @@
+body {
+	background-color: #ccc;
+}
+
+#social, #search {
+	min-height: 40px;
+	background-color: #260205;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#social {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+#social div.networks {
+	padding-left: 5%;
+	padding-top: 2px;
+}
+
+#social div.networks img {
+	padding: 5%;
+}
+
+#social div.networks a {
+	text-decoration: none;
+}
+
+#social div.form {
+	display: block;
+	float: right;
+}
+
+#social input {
+	background-color: #b30f00;
+	border: none;
+	height: 52px;
+	float: right;
+	padding: 0;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+#social .email {
+	color: #e9b9b5;
+	padding-left: 5%;
+	margin-left: 5%;
+	width: 75%;
+	font-family: 'Oswald', sans-serif;
+	font-weight: bold;
+}
+
+#social ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #e9b9b5;
+}
+#social :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #e9b9b5;
+   opacity:  1;
+}
+#social ::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #e9b9b5;
+   opacity:  1;
+}
+#social :-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #e9b9b5;
+}
+
+#social .subscribe {
+	width: 10%;
+	margin-right: 5%;
+	background-image: url('../images/subscribe.png');
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+	text-indent: -200px;
+}
+
+#header {
+	background-image: url('../images/whisky-background.png');
+	background-color: #C02D2C;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+#header h1 {
+	width: 30%;
+	margin: auto 3%;
+}
+
+#header #carousel {
+	width: 58%;
+}
+
+#header h1 a {
+	background-image: url('../images/nycwhisky.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	text-indent: -999px;
+	width: 100%;
+	height: 237px;
+	display: block;
+	margin: 10px;
+}
+
+#header #carousel {
+	background-color: #fff;
+	border: 1px #000;
+	margin: 3%;
+	padding: 20px 0;
+	box-shadow: 0px 0px 18px 1px #666;
+
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+
+}
+
+#carousel .carousel-nav {
+	width: 8%;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	text-indent: -999px;
+	height: 250px;
+}
+
+#carousel .carousel-nav a {
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+
+#carousel .carousel-content {
+	width: 84%;
+}
+
+#carousel #prev {
+	background-image: url('../images/left.png');
+}
+
+#carousel #next {
+	background-image: url('../images/right.png');
+}
+
+#carousel img {
+	margin-bottom: 10px;
+}
+
+#header #instagram {
+	background-color: #260205;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+#header #instagram h2 {
+	background-color: #b30f00;
+	font-size: 1.2em;
+	height: 52px;
+	color: #e9b9b5;
+	font-family: 'Oswald', sans-serif;
+	font-weight: bold;
+	width: 80%;
+	margin: 10px auto;
+	padding: 0 5% 0px 5%;
+	line-height: 53px;
+	background-image: url('../images/instagram-bottom.png');
+	background-repeat: no-repeat;
+	background-position: 90% 50%;
+}
+
+#header #instagram h2 a {
+	color: #e9b9b5;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+}
+
+#widget {
+	width: 90%;
+	margin: 0 auto;
+}
+
+#events {
+	background-color: #fff;
+	padding-bottom: 20px; 
+}
+
+#events div, #header div, #social div, #submiteventwrapper div {
+	min-height: 0;
+	min-width: 0;
+}
+
+#events .event {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	width: 90%;
+	margin: 15px auto 0;
+}
+
+#events .newday {
+	background-image: url('../images/newday.png');
+	background-repeat: no-repeat;
+	padding-top: 20px;
+}
+
+#events .date {
+	width: 20%;
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+}
+
+#events .date .day {
+	font-size: 0.8em;
+	font-weight: lighter;
+}
+
+#events .date .month {
+	font-size: 1.8em;
+	font-weight: bold;
+	line-height: 0.9em;
+}
+
+#events .date .dayofmonth {
+	font-size: 3.1em;
+	font-weight: bold;
+	line-height: 1em;
+}
+
+#events .eventdescriptionwrapper {
+	border-bottom: solid 1px #ccc;
+}
+
+#events .description {
+	width: 70%;
+}
+
+#events h3, #events h4, #header h2, #header h3, #header h4  {
+	margin: 0;
+}
+
+#events .social {
+	width: 10%;
+}
+
+#events .social a {
+	display: block;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+}
+
+#events .social a.calendar {
+	background-image: url('../images/calendar-grey.png');
+}
+
+#events .social a.calendar:hover {
+	background-image: url('../images/calendar-red.png');
+}
+
+#events .social a.twitter {
+	background-image: url('../images/twitter-grey.png');
+	margin-top: 1px;
+}
+
+#events .social a.twitter:hover {
+	background-image: url('../images/twitter-red.png');
+	margin-top: 1px;
+}
+
+#events .social a.facebook {
+	background-image: url('../images/facebook-grey.png');
+}
+
+#events .social a.facebook:hover {
+	background-image: url('../images/facebook-red.png');
+}
+
+#events #load-more-events {
+	font-family: 'Oswald', sans-serif;
+	font-weight: bold;
+	color: #c83232;
+	text-decoration: none;
+	display: block;
+	width: 50%;
+	margin: 20px auto 5px;
+	background: linear-gradient(to bottom, #ccc , #fff); 
+	text-align: center;
+	padding: 6px 0;
+}
+
+#submitevent {
+	background-color: #e7e7e7;
+	background: linear-gradient(to bottom, #ccc , #e7e7e7); 
+	font-family: 'Georgia', serif;
+}
+
+#submiteventwrapper {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap; 
+	width: 90%;
+	margin: 0 auto 20px;
+}
+
+#submitevent h2 {
+	font-family: 'Oswald', sans-serif;
+	font-weight: bold;
+	color: #59070e;
+}
+
+#submitevent p {
+	width: 100%;
+}
+
+#submitevent label {
+	width: 90%;
+	display: block;
+}
+
+#submitevent input, #submitevent textarea, #submitevent select, #submitevent option {
+	width: 90%;
+	margin-bottom: 10px;
+	font-size: 1.3em;
+}
+
+#submitevent div.small input {
+	width: 80%;
+}
+
+#submitevent .submit button {
+	background-color: #b30f00;
+	font-size: 1.2em;
+	height: 52px;
+	color: #e9b9b5;
+	font-family: 'Oswald', sans-serif;
+	font-weight: bold;
+	width: 30%;
+	margin: 10px auto;
+	border: none;
+}
+
+#footer {
+	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
+	font-size: 1.1em;
+	color: #fff;
+	padding: 20px 0;
+	background-image: url('../images/whisky-background.png');
+	background-color: #C02D2C;
+}
+
+#footer-navigation {
+	color: #bf8529;
+	margin-left: 5%;
+}
+
+#footer-navigation a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#copyright {
+	float: right;
+	margin-right: 5%;
+}
+
+h3, h3 a, h3 a, h3 a:visited, a:link {
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	color: #c83232;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+h3 a:hover {
+	color: #A81212;
+}
+
+h4 {
+	color: #a64f03;
+	font-family: 'Georgia', serif;
+	font-weight: normal;
+}
+
+#carousel .additional, #events .description {
+	font-family: 'Georgia', serif;
+}
