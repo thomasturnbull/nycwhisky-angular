@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.events', ['ngRoute'])
+angular.module('myApp.events', ['ngRoute', 'ngSanitize'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/events', {

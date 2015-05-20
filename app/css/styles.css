@@ -286,6 +286,13 @@ body {
 	background-image: url('../images/facebook-red.png');
 }
 
+#events .eventexpanded {
+	margin-right: auto;
+	margin-left: auto;
+	white-space: pre-wrap;
+	width: 90%;
+}
+
 #events #load-more-events {
 	font-family: 'Oswald', sans-serif;
 	font-weight: bold;
