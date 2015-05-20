@@ -33,10 +33,12 @@
         </a></span>
       </div>
       <div class="form">
-       <form>
-         <input class="subscribe" type="submit" value="subscribe">
-         <input class="email" type="email" name="email" placeholder="SUBSCRIBE" />
-       </form>
+        <form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=NYCwhiskyTastings', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+          <input type="hidden" value="NYCwhiskyTastings" name="uri">
+          <input type="hidden" name="loc" value="en_US">
+          <input class="subscribe" type="submit" value="Subscribe">
+          <input class="email" type="email" name="email" placeholder="SUBSCRIBE" />
+        </form>
       </div>
     </div>
 
