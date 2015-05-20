@@ -294,6 +294,29 @@ body {
 	width: 90%;
 }
 
+#events .street {
+	margin-top: 10px;
+}
+
+.additional, #events .eventexpanded {
+	font-family: 'Georgia', serif;
+}
+
+#events .description {
+	font-family: 'Oswald', sans-serif;
+}
+
+#events .description a, #events .description a:visited, #events .description a:link {
+	color: #c83232;
+	text-decoration: none;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+#events .description a:hover {
+	color: #A81212;
+}
+
 #events #load-more-events {
 	font-family: 'Oswald', sans-serif;
 	font-weight: bold;
@@ -384,7 +407,7 @@ body {
 	margin-right: 5%;
 }
 
-h3, h3 a, h3 a, h3 a:visited, a:link {
+h3, h3 a, h3 a, h3 a:visited, h3 a:link {
 	text-transform: uppercase;
 	font-family: 'Oswald', sans-serif;
 	color: #c83232;
@@ -402,8 +425,4 @@ h4 {
 	color: #a64f03;
 	font-family: 'Georgia', serif;
 	font-weight: normal;
-}
-
-#carousel .additional, #events .description {
-	font-family: 'Georgia', serif;
 }
