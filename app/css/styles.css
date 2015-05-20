@@ -426,3 +426,8 @@ h4 {
 	font-family: 'Georgia', serif;
 	font-weight: normal;
 }
+
+#about {
+	width: 90%;
+	margin: 15px auto;
+}
