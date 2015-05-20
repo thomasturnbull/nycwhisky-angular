@@ -11,8 +11,7 @@ angular.module('myApp.events', ['ngRoute'])
 
 .controller('EventsCtrl', ['$scope', '$http', 
 	function($scope, $http) {
-    // TODO(Thomas): Update events.json to point to the live json output.
-	$http.get('events2.json').success(function(data) {
+	$http.get('events.json').success(function(data) {
       $scope.events = data;
       // TODO(Thomas): Remove logging.  
       console.log(data);
