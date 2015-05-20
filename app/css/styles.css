@@ -243,6 +243,7 @@ body {
 
 #events .description {
 	width: 70%;
+	padding-right: 5%;
 }
 
 #events h3, #events h4, #header h2, #header h3, #header h4  {
@@ -390,6 +391,7 @@ h3, h3 a, h3 a, h3 a:visited, a:link {
 	font-weight: bold;
 	text-decoration: none;
 	font-size: 1em;
+	cursor: pointer;
 }
 
 h3 a:hover {
