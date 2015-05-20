@@ -90,7 +90,7 @@ body {
 
 #header h1 {
 	width: 30%;
-	margin: auto 3%;
+	margin: 100px 3% auto;
 }
 
 #header #carousel {
@@ -111,7 +111,7 @@ body {
 #header #carousel {
 	background-color: #fff;
 	border: 1px #000;
-	margin: 3%;
+	margin: 3% 3% auto;
 	padding: 20px 0;
 	box-shadow: 0px 0px 18px 1px #666;
 
