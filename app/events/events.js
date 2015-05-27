@@ -11,7 +11,7 @@ angular.module('myApp.events', ['ngRoute', 'ngSanitize'])
 
 .controller('EventsCtrl', ['$scope', '$http', 
 	function($scope, $http) {
-	$http.get('events.json').success(function(data) {
+	$http.get('/events.json').success(function(data) {
       $scope.events = data;
       // TODO(Thomas): Remove logging.  
       console.log(data);
