@@ -80,7 +80,7 @@ body {
 }
 
 #header {
-	background-image: url('../images/whisky-background.png');
+	background-image: url('../images/whisky-background-2.png');
 	background-color: #C02D2C;
 	display: -webkit-flex;
 	display: flex;
@@ -388,7 +388,7 @@ body {
 	font-size: 1.1em;
 	color: #fff;
 	padding: 20px 0;
-	background-image: url('../images/whisky-background.png');
+	background-image: url('../images/whisky-background-2.png');
 	background-color: #C02D2C;
 }
 
