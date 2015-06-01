@@ -50,16 +50,15 @@
     <div class="c3" id="header">
       <h1><a href="#/events">NYCWhisky</a></h1>
 
-      <div id="carousel">
-        <div class="carousel-nav" id="prev"><a href="#">previous</a></div></a>
+      <div id="carousel" ng-controller="FeaturedCtrl">
+        <div class="carousel-nav"></div>
         <div class="carousel-content">
-          <img width="100%" src="temporarygraphics/oaksteel.jpg" />
-          <h3><a href="#">Wathen's Bourbon &amp; Bomberger's Whiskey</a></h3>
-          <h4>Oak &amp; Steel</h4>
-          <span class="additional">5:00pm</span>
+          <img width="100%" ng-src="{{featured.image}}" />
+          <h3><a href="#" ng-bind-html="featured.title"></a></h3>
+          <h4 ng-bind-html="featured.location"></h4>
+          <span class="additional" ng-bind-html="featured.time"></span>
         </div>
-        <!-- TODO(Thomas): Add more content here. -->
-        <div class="carousel-nav" id="next"><a href="#">next</a></div></a>
+        <div class="carousel-nav"></div>
       </div>
 
       <div id="instagram">
@@ -98,6 +97,7 @@
   <script src="app.js"></script>
   <script src="about/about.js"></script>
   <script src="events/events.js"></script>
+  <script src="featured/featured.js"></script>
   <!-- TODO: Remove the version & interpolate stuff -->
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
