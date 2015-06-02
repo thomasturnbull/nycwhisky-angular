@@ -324,26 +324,26 @@ body {
 	width: 90%;
 }
 
-#events .street {
+.street {
 	margin-top: 10px;
 }
 
-.additional, #events .eventexpanded {
+.additional, .eventexpanded {
 	font-family: 'Georgia', serif;
 }
 
-#events .description {
+.description {
 	font-family: 'Oswald', sans-serif;
 }
 
-#events .description a, #events .description a:visited, #events .description a:link {
+.description a, .description a:visited, .description a:link {
 	color: #c83232;
 	text-decoration: none;
 	font-size: 1em;
 	cursor: pointer;
 }
 
-#events .description a:hover {
+.description a:hover {
 	color: #A81212;
 }
 
