@@ -21,6 +21,19 @@ angular.module('myApp.events', ['ngRoute', 'ngSanitize'])
       });
       this.event.open = open;
     }
+
+    // The old site asked people to enter event titles in the format
+    // event @ venue
+    // This strips out the @ venue.
+    $scope.title = {
+      get : function(original) {
+        if (!original) {
+          return;
+        }
+        var re = /@.*$/;
+        return original.replace(re, "");
+      }
+    }
 }]);
 
 

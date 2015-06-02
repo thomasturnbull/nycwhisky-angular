@@ -9,7 +9,7 @@
 	  <div class="dayofmonth">{{event.event.dayofmonth}}</div>
 	</div>
 	<div class="description">
-	  <h3 property="name"><a ng-click="toggle(!event.open)" property="url" ng-bind-html="event.event.title"></a></h3>
+	  <h3 property="name"><a ng-click="toggle(!event.open)" property="url" ng-bind-html="title.get(event.event.title)"></a></h3>
 	  <h4 property="location"  typeof="Place" ng-bind-html="event.event.location"></h4>
 	  <span class="additional">
 	  	<span class="time">{{event.event.time}}</span> \ 

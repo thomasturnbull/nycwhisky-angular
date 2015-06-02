@@ -6,7 +6,19 @@ angular.module('myApp.featured', ['ngSanitize'])
 	function($scope, $http) {
   	$http.get('/featured.json').success(function(data) {
         $scope.featured = data.events[0].event;
-        console.log($scope);
       });
+
+    // The old site asked people to enter event titles in the format
+    // event @ venue
+    // This strips out the @ venue.
+    $scope.title = {
+      get : function(original) {
+        if (!original) {
+          return;
+        }
+        var re = /@.*$/;
+        return original.replace(re, "");
+      }
+    }
 }]);
 

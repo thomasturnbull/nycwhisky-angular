@@ -60,7 +60,7 @@
               <div class="dayofmonth" ng-bind="featured.dayofmonth"></div>
             </div>
           </div>
-          <h3><a ng-click="showDetails = ! showDetails" ng-bind-html="featured.title"></a></h3>
+          <h3><a ng-click="showDetails = ! showDetails" ng-bind-html="title.get(featured.title)"></a></h3>
           <h4 ng-bind-html="featured.location"></h4>
 
           <span class="additional">
