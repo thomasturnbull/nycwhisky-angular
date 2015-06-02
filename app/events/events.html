@@ -33,6 +33,7 @@
 	</div>
 	<div class="eventexpanded" ng-show="event.open">
 	  <div ng-show="event.open" ng-bind-html="event.event.details"></div>
+	  <div ng-show="event.open && event.event.rsvplink"><a href="{{event.event.rsvplink}}">RSVP</a></div>
 	  <div ng-show="event.open && event.event.rsvp">RSVP: {{event.event.rsvp}}</div>
 	  <div ng-show="event.open && event.event.image"><img ng-src={{event.event.image}} width="100%"></div>
 	</div>

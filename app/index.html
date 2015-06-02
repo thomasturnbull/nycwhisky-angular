@@ -53,7 +53,7 @@
       <div id="carousel" ng-controller="FeaturedCtrl">
         <div class="carousel-nav"></div>
         <div class="carousel-content">
-          <div class="datewrapper" style="background-image: url('{{featured.image}}')">
+          <div class="datewrapper" ng-style="{'background-image':'url(' + featured.image +')'}">
             <div class="date" property="startDate">
               <div class="day" ng-bind="featured.day"></div>
               <div class="month" ng-bind="featured.month"></div>
@@ -76,6 +76,7 @@
           <div class="description" ng-show="showDetails && featured.phone" ng-bind="featured.phone"></div>
           <div class="eventexpanded" ng-show="showDetails">
             <div ng-show="showDetails" ng-bind-html="featured.details"></div>
+            <div ng-show="showDetails && featured.rsvplink"><a href="featured.rsvplink">RSVP</a></div>
             <div ng-show="showDetails && featured.rsvp">RSVP: <span ng-bind="featured.rsvp"></span></div>
           </div>
 
