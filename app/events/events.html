@@ -2,8 +2,8 @@
 <!-- TODO(Thomas): Figure out how to add class "newday" if repetition is a new day.
                    Limit repetition of events to xx? -->
 <div ng-repeat="event in events.events | limitTo : limit" class="event" vocab="http://schema.org/" typeof="Event">
+	<!-- TODO(Thomas): All of the social date components. -->
 	<div class="date" property="startDate" content="{{event.event.fulldate}}">
-	  <!-- TODO(Thomas): All of the social date components. -->
 	  <div class="day">{{event.event.day}}</div>
 	  <div class="month">{{event.event.month}}</div>
 	  <div class="dayofmonth">{{event.event.dayofmonth}}</div>
@@ -16,9 +16,6 @@
 	    <span class="cost" property="price">{{ event.event.cost }}</span>
 		<span class="cost" ng-hide="event.event.cost">Free</span>
 	  </span>
-
-	  <!-- TODO(Thomas): Update to sanitize body, then add show/hide. Add RSVP links, etc.
-	  https://docs.angularjs.org/api/ngSanitize/service/$sanitize -->
 
 	  <div class="description street" ng-show="event.open && event.event.street">{{event.event.street}}</div>
 	  <div class="description" ng-show="event.open && event.event.city">{{event.event.city}}</div>
