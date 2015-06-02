@@ -152,6 +152,21 @@ body {
 	margin-bottom: 10px;
 }
 
+#carousel .datewrapper {
+	height: 227px;
+	background-size: cover;
+	border: 2px solid #000000;
+}
+
+#carousel .date {
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	color: #fff;
+  	background: rgba(0, 0, 0, 0.6);
+  	height: 225px;
+  	padding-top: 20px;
+}
+
 #header #instagram {
 	background-color: #260205;
 	width: 100%;
@@ -218,23 +233,38 @@ body {
 	text-align: center;
 }
 
-#events .date .day {
+#events .date .day,
+#carousel .date .day {
 	font-size: 0.8em;
 	font-weight: lighter;
 	text-transform: uppercase;
 }
 
-#events .date .month {
+#carousel .date .day {
+	font-size: 1.8em;
+}
+
+#events .date .month,
+#carousel .date .month {
 	font-size: 1.8em;
 	font-weight: bold;
 	line-height: 0.9em;
 	text-transform: uppercase;
 }
 
-#events .date .dayofmonth {
+#carousel .date .month {
+	font-size: 3.8em;
+}
+
+#events .date .dayofmonth,
+#carousel .date .dayofmonth {
 	font-size: 3.1em;
 	font-weight: bold;
 	line-height: 1em;
+}
+
+#carousel .date .dayofmonth {
+	font-size: 5.1em;
 }
 
 #events .eventdescriptionwrapper {
