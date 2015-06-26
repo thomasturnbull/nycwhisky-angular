@@ -9,8 +9,8 @@ angular.module('myApp.events', ['ngRoute', 'ngSanitize'])
   });
 }])
 
-.controller('EventsCtrl', ['$scope', '$http',
-	function($scope, $http) {
+.controller('EventsCtrl', ['$scope', '$http', '$sanitize', 
+	function($scope, $http, $sanitize) {
   	$http.get('/events.json').success(function(data) {
         $scope.events = data;
       });
@@ -31,7 +31,7 @@ angular.module('myApp.events', ['ngRoute', 'ngSanitize'])
           return;
         }
         var re = /@.*$/;
-        return original.replace(re, "");
+        return $sanitize(original.replace(re, ""));
       }
     }
 
