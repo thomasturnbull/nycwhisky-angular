@@ -8,11 +8,11 @@
 	  <div class="month">{{event.event.month}}</div>
 	  <div class="dayofmonth">{{event.event.dayofmonth}}</div>
 	</div>
-	<div class="description">
+	<div class="description maindescription">
 	  <h3 property="name"><a ng-click="toggle(!event.open)" property="url" ng-bind-html="title.get(event.event.title)"></a></h3>
 	  <h4 property="location"  typeof="Place" ng-bind-html="event.event.location"></h4>
 	  <span class="additional">
-	  	<span class="time">{{event.event.time}}</span> \ 
+	  	<span class="time">{{event.event.time}}</span> \
 	    <span class="cost" property="price">{{ event.event.cost }}</span>
 		<span class="cost" ng-hide="event.event.cost">Free</span>
 	  </span>
@@ -22,7 +22,7 @@
 	  <div class="description" ng-show="event.open && event.event.location"><a href="https://maps.google.com/maps?q=directions+from+me+to+{{event.event.location}}" target="_blank">Directions</a></div>
 	  <div class="description" ng-show="event.open && event.event.website"><a href="{{event.event.website}}">Website</a></div>
 	  <div class="description" ng-show="event.open && event.event.phone">{{event.event.phone}}</div>
-	  
+
 	</div>
 	<!-- TODO(Thomas): All of the social links. -->
 	<div class="social">

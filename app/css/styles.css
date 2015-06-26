@@ -204,7 +204,7 @@ body {
 
 #events {
 	background-color: #fff;
-	padding-bottom: 20px; 
+	padding-bottom: 20px;
 }
 
 #events div, #header div, #social div, #submiteventwrapper div {
@@ -218,13 +218,21 @@ body {
 	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;
 	width: 90%;
-	margin: 15px auto 0;
+	margin: 0 auto 15px;
 }
 
 #events .newday {
 	background-image: url('../images/newday.png');
 	background-repeat: no-repeat;
 	padding-top: 20px;
+}
+
+#events .date, #events .maindescription, #events .social {
+	padding-top: 15px;
+}
+
+#events .maindescription, #events .social {
+	border-top: 1px solid #ddd;
 }
 
 #events .date {
@@ -355,14 +363,14 @@ body {
 	display: block;
 	width: 50%;
 	margin: 20px auto 5px;
-	background: linear-gradient(to bottom, #ccc , #fff); 
+	background: linear-gradient(to bottom, #ccc , #fff);
 	text-align: center;
 	padding: 6px 0;
 }
 
 #submitevent {
 	background-color: #e7e7e7;
-	background: linear-gradient(to bottom, #ccc , #e7e7e7); 
+	background: linear-gradient(to bottom, #ccc , #e7e7e7);
 	font-family: 'Georgia', serif;
 }
 
@@ -370,7 +378,7 @@ body {
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap; 
+	flex-flow: row wrap;
 	width: 90%;
 	margin: 0 auto 20px;
 }
