@@ -9,7 +9,7 @@ angular.module('myApp.events', ['ngRoute', 'ngSanitize'])
   });
 }])
 
-.controller('EventsCtrl', ['$scope', '$http', 
+.controller('EventsCtrl', ['$scope', '$http',
 	function($scope, $http) {
   	$http.get('/events.json').success(function(data) {
         $scope.events = data;
@@ -34,6 +34,18 @@ angular.module('myApp.events', ['ngRoute', 'ngSanitize'])
         return original.replace(re, "");
       }
     }
+
+    // Set the class for events, specifically if the day changes.
+    $scope.getEventClass = function(index, event) {
+      var currentdate = event.event.day + event.event.dayofmonth;
+      if (index == 0) {
+        $scope.date = currentdate;
+        return "event firstevent";
+      }
+      if ($scope.date != currentdate) {
+        $scope.date = event.event.day + event.event.dayofmonth;;
+        return "event newday";
+      }
+      return "event sameday";
+    }
 }]);
-
-

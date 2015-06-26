@@ -1,7 +1,7 @@
 
 <!-- TODO(Thomas): Figure out how to add class "newday" if repetition is a new day.
                    Limit repetition of events to xx? -->
-<div ng-repeat="event in events.events | limitTo : limit" class="event" vocab="http://schema.org/" typeof="Event">
+<div ng-repeat="event in events.events | limitTo : limit" ng-class="getEventClass($index, event)" vocab="http://schema.org/" typeof="Event">
 	<!-- TODO(Thomas): All of the social date components. -->
 	<div class="date" property="startDate" content="{{event.event.fulldate}}">
 	  <div class="day">{{event.event.day}}</div>

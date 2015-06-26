@@ -227,11 +227,12 @@ body {
 	padding-top: 20px;
 }
 
-#events .date, #events .maindescription, #events .social {
+#events .sameday .date, #events .sameday .maindescription, #events .sameday .social,
+#events .firstevent .date, #events .firstevent .maindescription, #events .firstevent .social {
 	padding-top: 15px;
 }
 
-#events .maindescription, #events .social {
+#events .sameday .maindescription, #events .sameday .social {
 	border-top: 1px solid #ddd;
 }
 
