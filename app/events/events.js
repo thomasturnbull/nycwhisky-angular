@@ -9,7 +9,7 @@ angular.module('myApp.events', ['ngRoute', 'ngSanitize'])
   });
 }])
 
-.controller('EventsCtrl', ['$scope', '$http', '$sanitize', 
+.controller('EventsCtrl', ['$scope', '$http', '$sanitize',
 	function($scope, $http, $sanitize) {
   	$http.get('/events.json').success(function(data) {
         $scope.events = data;
@@ -20,6 +20,14 @@ angular.module('myApp.events', ['ngRoute', 'ngSanitize'])
         event.open = false;
       });
       this.event.open = open;
+    }
+
+    // Dates for calendar are coming through strangely. Fix.
+    $scope.calendar = {
+      get : function(original) {
+        var components = original.split(" ");
+        return components[0];
+      }
     }
 
     // The old site asked people to enter event titles in the format

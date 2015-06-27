@@ -27,7 +27,7 @@
 	<!-- TODO(Thomas): All of the social links. -->
 	<div class="social">
 	  <!-- TODO(Thomas): Fix calendar link -->
-	  <div><a href="http://www.google.com/calendar/event?action=TEMPLATE&amp;text={{event.event.title}}&amp;dates={{event.event.fulldate}}&amp;details={{event.event.details}}&amp;location={{event.event.location}}&amp;trp=true&amp;sprop=&amp;sprop=name:nycwhisky.com" target="_blank" class="calendar" title="Save to calendar">Save to calendar</a></div>
+	  <div><a href="http://www.google.com/calendar/event?action=TEMPLATE&amp;text={{title.get(event.event.title)}}&amp;dates={{calendar.get(event.event.fulldate)}}/{{calendar.get(event.event.fulldate)}}&amp;details={{event.event.details}}&amp;location={{event.event.location}}&amp;trp=true&amp;sprop=&amp;sprop=name:nycwhisky.com" target="_blank" class="calendar" title="Save to calendar">Save to calendar</a></div>
 	  <div><a href="https://twitter.com/share?via=nycwhisky&url=http://nycwhisky.com&text={{title.get(event.event.title)}}+at+{{title.get(event.event.location)}}+on+{{event.event.day}}+{{event.event.dayofmonth}}+{{event.event.month}}&" target="_blank" class="twitter" title="Share on Twitter">Share on Twitter</a></div>
 	  <div><a href="https://www.facebook.com/sharer/sharer.php?u=http://nycwhisky.com/new/nycwhisky-angular/app/index.html" target="_blank" class="facebook" title="Share on Facebook">Share on Facebook</a></div>
 	</div>
