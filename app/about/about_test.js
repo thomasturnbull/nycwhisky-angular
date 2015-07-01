@@ -2,7 +2,7 @@
 
 describe('myApp.about module', function() {
 
-  beforeEach(module('myApp.abut'));
+  beforeEach(module('myApp.about'));
 
   describe('about controller', function(){
 
