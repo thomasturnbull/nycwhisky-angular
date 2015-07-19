@@ -86,7 +86,6 @@ body {
 	display: flex;
 	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;
-	min-height: 1149px;
 }
 
 #header h1 {

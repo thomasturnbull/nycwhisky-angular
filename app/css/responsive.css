@@ -18,6 +18,14 @@
   width: 100%;
 }
 
+#header {
+  min-height: 400px;
+}
+
+#instagram {
+  display: none;
+}
+
 #submiteventwrapper div {
   width: 100%;
 }
@@ -41,6 +49,12 @@
   }
   .c1, .c6, .c7 {
     width: 100%;
+  }
+  #header {
+    min-height: 1149px;
+  }
+  #instagram {
+    display: block;
   }
 }
 
