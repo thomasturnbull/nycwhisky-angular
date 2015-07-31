@@ -21,8 +21,33 @@ body {
 	padding-top: 2px;
 }
 
-#social div.networks img {
-	padding: 5%;
+#social div.networks a {
+	width: 30px;
+	height: 27px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	background: url(../images/social-sprite.png);
+	display: block;
+	float: left;
+	margin: 5%;
+}
+
+#social div.networks a.twitter {
+	background-position: 60px 25px;
+}
+
+#social div.networks a.instagram {
+	background-position: 60px -2px;
+}
+
+#social div.networks a.facebook {
+	background-position: 60px 56px;
+	margin-left: 2%;
+}
+
+#social div.networks a:hover {
+	background-position-x: 30px;
 }
 
 #social div.networks a {
