@@ -251,6 +251,15 @@ body {
 	padding-top: 20px;
 }
 
+#events .sponsored {
+	background-color: #B5000D;
+	color: #fff;
+}
+
+#events .sponsored h4 {
+	color: #fff;
+}
+
 #events .sameday .date, #events .sameday .maindescription, #events .sameday .social,
 #events .firstevent .date, #events .firstevent .maindescription, #events .firstevent .social {
 	padding-top: 15px;
@@ -374,6 +383,18 @@ body {
 	text-decoration: none;
 	font-size: 1em;
 	cursor: pointer;
+}
+
+#events .sponsored .description a, #events .sponsored .description a:visited, #events .sponsored .description a:link {
+    color: #fff;
+}
+
+#events .sponsored .description a:hover {
+	color: #CCC;
+}
+
+.sponsorship {
+	color: #F3AE4B;
 }
 
 .description a:hover {

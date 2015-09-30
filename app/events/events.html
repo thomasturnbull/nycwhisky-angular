@@ -16,6 +16,7 @@
 	    <span class="cost" property="price">{{ event.event.cost }}</span>
 		<span class="cost" ng-hide="event.event.cost">Free</span>
 	  </span>
+	  <div class="sponsorship" ng-show="event.event.sponsorship">{{event.event.sponsorship}}</div>
 
 	  <div class="description street" ng-show="event.open && event.event.street">{{event.event.street}}</div>
 	  <div class="description" ng-show="event.open && event.event.city">{{event.event.city}}</div>

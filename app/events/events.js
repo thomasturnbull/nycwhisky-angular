@@ -45,15 +45,24 @@ angular.module('myApp.events', ['ngRoute', 'ngSanitize'])
 
     // Set the class for events, specifically if the day changes.
     $scope.getEventClass = function(index, event) {
+      var eventclass = "event";
+      // Deal with date separation.
       var currentdate = event.event.day + event.event.dayofmonth;
       if (index == 0) {
         $scope.date = currentdate;
-        return "event firstevent";
+        eventclass += " firstevent";
       }
-      if ($scope.date != currentdate) {
+      else if ($scope.date != currentdate) {
         $scope.date = event.event.day + event.event.dayofmonth;;
-        return "event newday";
+        eventclass += " newday";
       }
-      return "event sameday";
+      else { 
+        eventclass += " sameday";
+      }
+      // Deal with sponsorship.
+      if (event.event.sponsorship) {
+        eventclass += " sponsored";
+      }
+      return eventclass;
     }
 }]);
