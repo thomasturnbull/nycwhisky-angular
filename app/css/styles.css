@@ -254,6 +254,11 @@ body {
 #events .sponsored {
 	background-color: #B5000D;
 	color: #fff;
+	padding-bottom: 7px;
+}
+
+#events .sponsored.newday {
+	padding-top: 30px;
 }
 
 #events .sponsored h4 {
@@ -265,8 +270,12 @@ body {
 	padding-top: 15px;
 }
 
-#events .sameday .maindescription, #events .sameday .social {
+#events  .sameday .maindescription, #events .sameday .social {
 	border-top: 1px solid #ddd;
+}
+
+#events .sponsored .maindescription, #events .sponsored .social {
+	border-top: 0px;
 }
 
 #events .date {
@@ -337,8 +346,16 @@ body {
 	background-image: url('../images/calendar-grey.png');
 }
 
+#events .sponsored .social a.calendar {
+	background-image: url('../images/calendar-red.png');
+}
+
 #events .social a.calendar:hover {
 	background-image: url('../images/calendar-red.png');
+}
+
+#events .sponsored .social a.calendar:hover {
+	background-image: url('../images/calendar-grey.png');
 }
 
 #events .social a.twitter {
@@ -346,17 +363,33 @@ body {
 	margin-top: 1px;
 }
 
+#events .sponsored .social a.twitter {
+	background-image: url('../images/twitter-red.png');
+}
+
 #events .social a.twitter:hover {
 	background-image: url('../images/twitter-red.png');
 	margin-top: 1px;
+}
+
+#events .sponsored .social a.twitter:hover {
+	background-image: url('../images/twitter-grey.png');
 }
 
 #events .social a.facebook {
 	background-image: url('../images/facebook-grey.png');
 }
 
+#events .sponsored .social a.facebook {
+	background-image: url('../images/facebook-red.png');
+}
+
 #events .social a.facebook:hover {
 	background-image: url('../images/facebook-red.png');
+}
+
+#events .sponsored .social a.facebook:hover {
+	background-image: url('../images/facebook-grey.png');
 }
 
 #events .eventexpanded {
