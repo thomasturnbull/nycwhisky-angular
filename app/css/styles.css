@@ -428,6 +428,17 @@ body {
 
 .sponsorship {
 	color: #F3AE4B;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-family: 'Oswald', sans-serif;
+    padding: 8px 0;
+}
+
+#carousel .sponsorship {
+	background-color: #B5000D;
+    text-align: center;
+    padding: 10px 8px;
+    margin-top: 10px;
 }
 
 .description a:hover {

@@ -79,6 +79,8 @@
             <span class="cost" ng-hide="featured.cost">Free</span>
           </span>
 
+          <div class="sponsorship" ng-show="featured.sponsorship" ng-bind="featured.sponsorship"></div>
+
           <div class="description street" ng-show="showDetails && featured.street" ng-bind="featured.street"></div>
           <div class="description" ng-show="showDetails && featured.city" ng-bind="featured.city"></div>
           <div class="description" ng-show="showDetails && featured.location"><a href="https://maps.google.com/maps?q=directions+from+me+to+{{featured.location}}" target="_blank">Directions</a></div>
