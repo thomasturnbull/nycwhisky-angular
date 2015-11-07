@@ -20,6 +20,24 @@ angular.module('myApp.events', ['ngRoute', 'ngSanitize'])
         event.open = false;
       });
       this.event.open = open;
+      console.log(this);
+      // var eventcontainer = document.querySelector("#events");
+      // console.log(eventcontainer);
+      // eventcontainer.scrollTop = 0;
+      // This isn't perfect due to sponsorship & day dividers.
+      var scrolling = 82 + (107 * this.$index);
+      //console.log(scrolling);
+      document.body.scrollTop = scrolling;
+      // var thiselem = document.getElementById("event-"+this.$index);
+      // var thiselemoffset = thiselem.getBoundingClientRect().top;
+      // console.log(thiselemoffset);
+      // var bodyoffset = document.body.getBoundingClientRect().top;
+      // console.log(bodyoffset);
+      // var offset =  -bodyoffset + thiselemoffset;
+      // console.log(offset);
+      // //console.log(thiselem.getBoundingClientRect());
+      // document.body.scrollTop = offset;
+
     }
 
     // Dates for calendar are coming through strangely. Fix.
