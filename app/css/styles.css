@@ -226,6 +226,25 @@ body {
 	margin: 0 auto;
 }
 
+#instagram img {
+	width: 100% !important;
+    height: auto !important;
+    border: 2px solid #fff;
+    margin-bottom: 14px;
+}
+
+#instagram #widget {
+	/* Prevent vertical gaps */
+	line-height: 0;
+
+	-webkit-column-count: 3;
+	-webkit-column-gap:   16px;
+	-moz-column-count:    3;
+	-moz-column-gap:      16px;
+	column-count:         3;
+	column-gap:           16px;
+}
+
 #events {
 	background-color: #fff;
 	padding-bottom: 20px;

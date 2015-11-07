@@ -7,6 +7,7 @@ angular.module('myApp', [
   'myApp.contact',
   'myApp.events',
   'myApp.featured',
+  'myApp.instagram',
   'myApp.login',
   'myApp.version'
 ]).

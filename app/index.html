@@ -91,19 +91,19 @@
             <div ng-show="showDetails && featured.rsvplink"><a href="featured.rsvplink">RSVP</a></div>
             <div ng-show="showDetails && featured.rsvp">RSVP: <span ng-bind="featured.rsvp"></span></div>
           </div>
-
         </div>
         <div class="carousel-nav"></div>
       </div>
 
       <div id="instagram">
         <h2><a href="https://instagram.com/nycwhisky/">FOLLOW US ON INSTAGRAM</a></h2>
-        <div id="widget">
-          <!-- INSTANSIVE WIDGET --><script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/08438a053d35b1bcceb98c61a25762a50654ab4e.html" id="instansive_08438a053d" name="instansive_08438a053d"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+        <div id="widget" ng-controller="ShowImages as images">
+          <a ng-repeat="p in pics" href="{{p.link}}">
+            <img ng-src="{{p.images.low_resolution.url}}" title="{{p.caption.text}}" />
+          </a>
         </div>
       </div>
     </div>
-
 
     <div class="c4" id="events">
       <div ng-view autoscroll></div>
@@ -134,6 +134,7 @@
   <script src="contact/contact.js"></script>
   <script src="events/events.js"></script>
   <script src="featured/featured.js"></script>
+  <script src="instagram/instagram.js"></script>
   <script src="login/login.js"></script>
   <!-- TODO: Remove the version & interpolate stuff -->
   <script src="components/version/version.js"></script>
