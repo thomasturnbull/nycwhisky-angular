@@ -16,28 +16,30 @@ angular.module('myApp.events', ['ngRoute', 'ngSanitize'])
       });
 
     $scope.toggle = function (open) {
+      // Keep track of which event was expanded
+      var i = 0;
+      var expandedeventindex = 0;
+      var expandedeventheight = 0;
       angular.forEach($scope.events.events, function (event) {
-        event.open = false;
+        // if event is open, log it's position and size
+        if (event.open) {
+          expandedeventindex = i;
+          expandedeventheight = document.getElementById("event-"+i).getBoundingClientRect().height;
+          event.open = false;
+        }
+        i++;
       });
       this.event.open = open;
-      console.log(this);
-      // var eventcontainer = document.querySelector("#events");
-      // console.log(eventcontainer);
-      // eventcontainer.scrollTop = 0;
-      // This isn't perfect due to sponsorship & day dividers.
-      var scrolling = 82 + (107 * this.$index);
-      //console.log(scrolling);
-      document.body.scrollTop = scrolling;
-      // var thiselem = document.getElementById("event-"+this.$index);
-      // var thiselemoffset = thiselem.getBoundingClientRect().top;
-      // console.log(thiselemoffset);
-      // var bodyoffset = document.body.getBoundingClientRect().top;
-      // console.log(bodyoffset);
-      // var offset =  -bodyoffset + thiselemoffset;
-      // console.log(offset);
-      // //console.log(thiselem.getBoundingClientRect());
-      // document.body.scrollTop = offset;
 
+      var thiselem = document.getElementById("event-"+this.$index);
+      var thiselemoffset = thiselem.getBoundingClientRect().top;
+      var bodyoffset = document.body.getBoundingClientRect().top;
+      var offset =  -bodyoffset + thiselemoffset;
+      // Deal with collapse of expanded.
+      if (expandedeventheight > 0 && expandedeventindex < this.$index) {
+        offset = offset - expandedeventheight + 107;
+      }
+      document.body.scrollTop = offset;
     }
 
     // Dates for calendar are coming through strangely. Fix.
