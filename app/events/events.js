@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.events', ['ngRoute', 'ngSanitize'])
+angular.module('myApp.events', ['ngRoute', 'ngSanitize', 'jshor.angular-addtocalendar', 'ui.bootstrap'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/events', {

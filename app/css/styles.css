@@ -354,26 +354,38 @@ body {
 	width: 10%;
 }
 
-#events .social a {
+#events .social a.icon,
+#events .social div.dropdown {
 	display: block;
 	text-indent: -9999px;
 	width: 30px;
 	height: 30px;
 }
 
-#events .social a.calendar {
+#events .social div.dropdown ul li a {
+	text-indent: 0;
+}
+
+#events .social a.calendar,
+#events .social div.dropdown span.btn {
 	background-image: url('../images/calendar-grey.png');
+	border: none;
+	border-radius: 0;
+	padding: 5px 11px;
 }
 
-#events .sponsored .social a.calendar {
+#events .sponsored .social a.calendar,
+#events .sponsored .social div.dropdown span.btn  {
 	background-image: url('../images/calendar-red.png');
 }
 
-#events .social a.calendar:hover {
+#events .social a.calendar:hover,
+#events .social div.dropdown span.btn:hover {
 	background-image: url('../images/calendar-red.png');
 }
 
-#events .sponsored .social a.calendar:hover {
+#events .sponsored .social a.calendar:hover,
+#events .sponsored .social div.dropdown span.btn:hover {
 	background-image: url('../images/calendar-grey.png');
 }
 
