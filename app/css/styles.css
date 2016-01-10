@@ -111,6 +111,7 @@ body {
 	display: flex;
 	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;
+	padding-bottom: 10px;
 }
 
 #header h1 {
