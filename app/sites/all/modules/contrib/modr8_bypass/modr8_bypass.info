@@ -1,0 +1,6 @@
+; $Id: modr8_bypass.info,v 1.1 2009/08/29 00:00:28 johngriffin Exp $
+name = Modr8 Bypass
+description = "Allow users with selected roles to bypass node moderation."
+core = 6.x
+
+dependencies[] = modr8

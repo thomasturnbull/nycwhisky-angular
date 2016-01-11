@@ -1,0 +1,4 @@
+name = "Percent Mobile"
+description = Adds Percent Mobile javascript tracking code to all your site's pages.
+package = Statistics
+core = 6.x

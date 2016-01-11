@@ -1,0 +1,82 @@
+<?php
+
+/*
+ * @file
+ * Drupal Module: Percent Mobile
+ * Adds the required code to the bottom of all your Drupal pages
+ * to allow tracking by the Percent Mobile statistics package.
+ *
+ * @author: Thomas Turnbull (tom_o_t) <www.thomasturnbull.com>
+ */
+
+function percent_mobile_perm() {
+  return array('administer percent mobile');
+}
+
+function percent_mobile_menu() {
+  $items['admin/settings/percentmobile'] = array(
+    'title' => 'Percent Mobile',
+    'description' => 'Configure the settings used to generate your Percent Mobile tracking code.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('percent_mobile_admin_settings_form'),
+    'access arguments' => array('administer percent mobile'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Implementation of hook_admin_settings() for configuring the module
+ */
+function percent_mobile_admin_settings_form(&$form_state) {
+
+  $form['percent_mobile_account'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Percent Mobile tracking code'),
+    '#default_value' => variable_get('percent_mobile_account', ''),
+    '#size' => 40,
+    '#maxlength' => 60,
+    '#required' => TRUE,
+    '#description' => t('You can get a tracking code from the <a href="@url">Percent Mobile</a> website.', array('@url' => 'http://percentmobile.com/')),
+  );
+
+  return system_settings_form($form);
+}
+
+/**
+ * Implementation of hook_init().
+ * Load the PercentMobile javascript.
+ */
+function percent_mobile_init() {
+  $id = variable_get('percent_mobile_account', '');
+  if (!empty($id)) {
+    // Can not use drupal_add_js() in D6 with external files.
+    drupal_set_html_head('<script type="text/javascript" src="http://assets.percentmobile.com/percent_mobile.js"></script>');
+  }
+}
+
+/**
+ * Implementation of hook_footer() to insert JavaScript at the end of the page.
+ */
+function percent_mobile_footer($main = 0) {
+
+  $id = variable_get('percent_mobile_account', '');
+
+  if (!empty($id)) {
+
+    // Build tracker code.
+    $script = 'percent_mobile_track(' . drupal_to_js($id) . ')';
+
+    drupal_add_js($script, 'inline', 'footer');
+    // Create the noscript tag;
+    $noscript = '<noscript>';
+    $noscript .= '<img src="http://tracking.percentmobile.com/pixel/';
+    $noscript .= check_plain($id);
+    $noscript .= '/pixel.gif?v=271009_js" width="2" height="2" alt="" />';
+    $noscript .= '</noscript>';
+    // Return the noscript tag to be printed in the footer.
+    return $noscript;
+    // @todo drupal_to_js($id);
+  }
+}
