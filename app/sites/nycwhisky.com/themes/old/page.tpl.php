@@ -54,7 +54,7 @@
   <div class="content">
   
   
-   <div id="primary" style=<?php print '"width:'.marinelli_width( $right, $left).'px;">' ?>
+   <div id="primary" style=<?php print '"width:'.new_width( $right, $left).'px;">' ?>
                <div class="singlepage">
 
          <?php if ($title): print '<h2'. ($tabs ? ' class="with-tabs"' : '') .'>'. $title .'</h2>'; endif; ?>
