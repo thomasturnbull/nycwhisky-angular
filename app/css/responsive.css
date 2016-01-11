@@ -20,6 +20,7 @@
 
 #header {
   min-height: 400px;
+  padding-bottom: 10px;
 }
 
 #instagram {
@@ -52,6 +53,7 @@
   }
   #header {
     min-height: 1149px;
+    padding-bottom: 0;
   }
   #instagram {
     display: block;
