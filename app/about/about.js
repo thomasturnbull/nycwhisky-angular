@@ -10,5 +10,8 @@ angular.module('myApp.about', ['ngRoute'])
 }])
 
 .controller('AboutCtrl', [function() {
-
+	var elementRect = document.getElementById("events").getBoundingClientRect();
+	var bodyRect = document.body.getBoundingClientRect();
+	var offset = (elementRect.top - bodyRect.top);
+    window.scrollTo(0, offset);
 }]);

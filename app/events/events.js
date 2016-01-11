@@ -11,6 +11,7 @@ angular.module('myApp.events', ['ngRoute', 'ngSanitize', 'jshor.angular-addtocal
 
 .controller('EventsCtrl', ['$scope', '$http', '$sanitize',
 	function($scope, $http, $sanitize) {
+    window.scrollTo(0, 0);
   	$http.get('/events.json').success(function(data) {
         $scope.events = data;
       });
