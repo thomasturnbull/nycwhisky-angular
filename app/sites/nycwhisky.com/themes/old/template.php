@@ -30,13 +30,3 @@ function phptemplate_breadcrumb($breadcrumb) {
   }
 }
 
-/**
- * Implementation of preprocess_node()
- * Add map to locations
- */
-function old_preprocess_node(&$variables) {
-  if($variables['type'] == 'location') {
-    $block = gmap_location_block_view($variables['nid']);
-    $variables['map'] = $block['content'];
-  }
-}
