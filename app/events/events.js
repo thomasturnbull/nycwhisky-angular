@@ -46,7 +46,8 @@ angular.module('myApp.events', ['ngRoute', 'ngSanitize', 'jshor.angular-addtocal
     $scope.calendar = {
       get : function(original) {
         var components = original.split(" ");
-        return components[0];
+        var datestring = components[0];
+        return datestring.substring(0, datestring.length - 1);
       }
     }
 
