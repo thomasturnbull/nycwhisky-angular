@@ -21,3 +21,10 @@ function _phptemplate_variables($hook, $vars = array()) {
   }
   return $vars;
 }
+
+// remove the revision information field from displaying for non moderator roles
+function new_node_form($form) {
+  // Remove 'Log message' text area
+  $form['revision_information']['#access'] = false; //user_access('view revisions');
+  return theme_node_form($form);
+}
