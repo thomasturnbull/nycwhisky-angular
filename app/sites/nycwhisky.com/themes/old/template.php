@@ -1,11 +1,7 @@
 <?php
-//template for Marinelli Theme
-//author: singalkuppe - www.signalkuppe.com
 
 
-
-
-function marinelli_width($left, $right) {
+function old_width($left, $right) {
   $width = 540;
   if (!$left ) {
     $width = $width +190;
@@ -38,7 +34,7 @@ function phptemplate_breadcrumb($breadcrumb) {
  * Implementation of preprocess_node()
  * Add map to locations
  */
-function marinelli_preprocess_node(&$variables) {
+function old_preprocess_node(&$variables) {
   if($variables['type'] == 'location') {
     $block = gmap_location_block_view($variables['nid']);
     $variables['map'] = $block['content'];

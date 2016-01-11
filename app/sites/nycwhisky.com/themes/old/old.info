@@ -1,0 +1,11 @@
+name = Old Theme
+
+description = The original nycwhisky site
+
+version = VERSION
+
+core = 6.x
+
+engine = phptemplate
+
+stylesheets[all][] = style.css
