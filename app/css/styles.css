@@ -457,6 +457,7 @@ body {
 	border: none;
 	border-radius: 0;
 	padding: 5px 11px;
+        width: 8px;
 }
 
 #events .sponsored .social a.calendar,
