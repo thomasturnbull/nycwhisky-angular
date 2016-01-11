@@ -1,0 +1,24 @@
+
+name = iWebkit
+description = iPhone Custom Theme by <a href="http://sumitk.net">SumitK</a> based on
+<a href="http://iwebkit.net">iWebkit</a> Framework.
+ 
+core = 6.x
+engine = phptemplate
+stylesheets[all][] = style.css
+scripts[] = javascript/functions.js
+regions[block_top] = Block Top
+regions[block_middle] = Block Middle
+regions[block_lower] = Block Lower
+regions[footer_top] = Footer Top
+regions[footer_middle] = Footer Middle
+regions[footer_lower] = Footer Lower
+regions[content] = Content
+regions[footer] = Footer
+
+; Information added by drupal.org packaging script on 2011-08-02
+version = "6.x-2.2"
+core = "6.x"
+project = "iwebkit"
+datestamp = "1312285316"
+

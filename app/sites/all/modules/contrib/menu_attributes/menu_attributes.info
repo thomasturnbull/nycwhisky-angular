@@ -1,0 +1,5 @@
+; $Id: menu_attributes.info,v 1.4 2009/04/21 22:06:09 schoonzie Exp $
+name = "Menu Attributes"
+description = "Allows administrators to specify custom attributes for menu items."
+package = "Menu"
+core = 6.x

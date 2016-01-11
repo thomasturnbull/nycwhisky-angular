@@ -1,0 +1,16 @@
+name = New
+
+description = New NYCWhisky theme
+
+version = VERSION
+
+core = 6.x
+
+engine = phptemplate
+
+stylesheets[all][] = style.css
+
+scripts[] = scripts.js
+
+
+
