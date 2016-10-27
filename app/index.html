@@ -88,7 +88,7 @@
           <div class="description" ng-show="showDetails && featured.phone" ng-bind="featured.phone"></div>
           <div class="eventexpanded" ng-show="showDetails">
             <div ng-show="showDetails" ng-bind-html="featured.details"></div>
-            <div ng-show="showDetails && featured.rsvplink"><a href="featured.rsvplink">RSVP</a></div>
+            <div ng-show="showDetails && featured.rsvplink"><a href="{{featured.rsvplink}}">RSVP</a></div>
             <div ng-show="showDetails && featured.rsvp">RSVP: <span ng-bind="featured.rsvp"></span></div>
           </div>
         </div>
