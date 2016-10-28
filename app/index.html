@@ -115,18 +115,25 @@
     </div>
 
     <div class="c4" id="events">
-      <div style="display: none;
-                  min-height: 0;
+      <style scoped>
+      @media (min-width: 600px) {
+          .banner-mobile {
+              display: none;
+          }
+      }
+      </style>
+      <div style="min-height: 0;
                   min-width: 0;
                   width: 100%;
-                  background: #fff;">
+                  background: #fff;"
+           class="banner-mobile">
         <a href="http://whiskyconnoisseur.us/wnyc">
           <img src="/images/whiskykit.gif" style="max-width: 89%;
                                                   margin: 15px auto 5px;
                                                   display: block;">
         </a>
       </div>
-      <div style="max-width: 89%; margin: 0 auto 15px; color: gray; font-size: 0.7em;">Advertisement</div>
+      <div style="max-width: 89%; margin: 0 auto 15px; color: gray; font-size: 0.7em;" class="banner-mobile">Advertisement</div>
       <div ng-view autoscroll></div>
     </div>
 
