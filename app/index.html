@@ -96,14 +96,15 @@
       </div>
 
       <div id="instagram">
-        <div style="display: none;">
+        <div>
           <a href="http://whiskyconnoisseur.us/wnyc">
             <img src="/images/whiskykit.gif" 
                  style="max-width: 89%;
-                        margin: 15px auto 25px;
+                        margin: 15px auto 5px;
                         display: block;">
           </a>
         </div>
+        <div style="max-width: 89%; margin: 0 auto 15px; color: gray; font-size: 0.7em;">Advertisement</div>
         <h2><a href="https://instagram.com/nycwhisky/">FOLLOW US ON INSTAGRAM</a></h2>
         <div id="widget" ng-controller="ShowImages as images">
           <a ng-repeat="p in pics" href="{{p.link}}">
@@ -121,10 +122,11 @@
                   background: #fff;">
         <a href="http://whiskyconnoisseur.us/wnyc">
           <img src="/images/whiskykit.gif" style="max-width: 89%;
-                                                  margin: 15px auto 15px;
+                                                  margin: 15px auto 5px;
                                                   display: block;">
         </a>
       </div>
+      <div style="max-width: 89%; margin: 0 auto 15px; color: gray; font-size: 0.7em;">Advertisement</div>
       <div ng-view autoscroll></div>
     </div>
 
