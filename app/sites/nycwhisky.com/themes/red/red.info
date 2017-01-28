@@ -1,0 +1,11 @@
+name = Red Theme
+
+description = The red version
+
+version = VERSION
+
+core = 6.x
+
+engine = phptemplate
+
+stylesheets[all][] = style.css
