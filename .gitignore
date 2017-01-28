@@ -19,6 +19,7 @@ app/error_log
 
 # Ignore configuration files that may contain sensitive information.
 app/sites/*/*settings*.php
+app/sites/*/settings.php
 
 # Ignore paths that contain generated content.
 app/files/
