@@ -4,3 +4,23 @@ node_modules/
 tmp
 .DS_Store
 .idea
+
+# Hostmonster
+40*.shtml
+500.php
+500.shtml
+favicon.ico
+default.html
+
+# App
+app/error_log
+
+# Drupal
+
+# Ignore configuration files that may contain sensitive information.
+app/sites/*/*settings*.php
+
+# Ignore paths that contain generated content.
+app/files/
+app/sites/*/files
+app/sites/*/private
