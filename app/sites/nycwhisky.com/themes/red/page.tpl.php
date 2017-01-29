@@ -98,7 +98,7 @@
 
     <div class="c7" id="footer">
       <span id="footer-navigation">
-        <a href="http://nycwhisky.com/#/events">EVENTS</a> | <a href="/contact">CONTACT US</a> | <a href="#/about">ABOUT US</a> | <a href="#/login">LOG IN</a>
+        <a href="http://nycwhisky.com/#/events">EVENTS</a> | <a href="/node/add/event">ADD EVENT</a> | <a href="/contact">CONTACT US</a> | <a href="http://nycwhisky.com/#/about">ABOUT US</a> | <a href="/user">LOG IN</a>
       </span>
       <span id="copyright">&copy; COPYRIGHT NYCWHISKY</span>
       <!--<div id="footer-banner">Your advert here, 728px x 90px<br />Optionally provide smaller version for mobile.</div>-->
