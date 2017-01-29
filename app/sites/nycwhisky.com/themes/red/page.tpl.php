@@ -52,7 +52,7 @@
     </div>
 
     <div class="c3" id="header">
-      <h1><a href="#/events">NYCWhisky</a></h1>
+      <h1><a href="http://nycwhisky.com">NYCWhisky</a></h1>
 
       <div id="carousel" ng-controller="FeaturedCtrl">
         <div class="carousel-nav"></div>
@@ -74,7 +74,7 @@
               <?php print $right ?>
             </div><!-- end right -->
           <?php } ?>
-          
+
         </div>
         <div class="carousel-nav"></div>
       </div>
@@ -98,7 +98,7 @@
 
     <div class="c7" id="footer">
       <span id="footer-navigation">
-        <a href="#/events">EVENTS</a> | <a href="#/contact">CONTACT US</a> | <a href="#/about">ABOUT US</a> | <a href="#/login">LOG IN</a>
+        <a href="http://nycwhisky.com/#/events">EVENTS</a> | <a href="/contact">CONTACT US</a> | <a href="#/about">ABOUT US</a> | <a href="#/login">LOG IN</a>
       </span>
       <span id="copyright">&copy; COPYRIGHT NYCWHISKY</span>
       <!--<div id="footer-banner">Your advert here, 728px x 90px<br />Optionally provide smaller version for mobile.</div>-->
@@ -116,7 +116,6 @@
   <script src="app.js"></script>
   <script src="about/about.js"></script>
   <script src="add/add.js"></script>
-  <script src="contact/contact.js"></script>
   <script src="events/events.js"></script>
   <script src="featured/featured.js"></script>
   <script src="instagram/instagram.js"></script>
