@@ -115,11 +115,9 @@
   <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
   <script src="app.js"></script>
   <script src="about/about.js"></script>
-  <script src="add/add.js"></script>
   <script src="events/events.js"></script>
   <script src="featured/featured.js"></script>
   <script src="instagram/instagram.js"></script>
-  <script src="login/login.js"></script>
   <!-- TODO: Remove the version & interpolate stuff -->
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>

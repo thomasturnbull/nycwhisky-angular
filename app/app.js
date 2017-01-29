@@ -4,12 +4,9 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.about',
-  'myApp.add',
-  'myApp.contact',
   'myApp.events',
   'myApp.featured',
   'myApp.instagram',
-  'myApp.login',
   'myApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
