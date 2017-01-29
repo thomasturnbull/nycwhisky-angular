@@ -1,0 +1,14 @@
+#events {
+	padding: 20px;
+}
+
+#events h2 {
+	text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    color: #c83232;
+    font-weight: bold;
+}
+
+#events .form-text {
+	max-width: 100%;
+}

@@ -57,46 +57,28 @@
       <div id="carousel" ng-controller="FeaturedCtrl">
         <div class="carousel-nav"></div>
         <div class="carousel-content">
-          <div class="datewrapper" ng-style="{'background-image':'url(' + featured.image +')'}">
-            <div class="date" property="startDate">
-              <div class="day" ng-bind="featured.day"></div>
-              <div class="month" ng-bind="featured.month"></div>
-              <div class="dayofmonth" ng-bind="featured.dayofmonth"></div>
-            </div>
-          </div>
-          <h3><a ng-click="showDetails = ! showDetails" ng-bind-html="title.get(featured.title)"></a></h3>
-          <h4 ng-bind-html="featured.location"></h4>
+          
 
-          <span class="additional">
-            <span class="time" ng-bind="featured.time"></span> \
-            <span class="cost" property="price" ng-bind="featured.cost"></span>
-            <span class="cost" ng-hide="featured.cost">Free</span>
-          </span>
 
-          <div class="sponsorship" ng-show="featured.sponsorship" ng-bind="featured.sponsorship"></div>
 
-          <div class="description street" ng-show="showDetails && featured.street" ng-bind="featured.street"></div>
-          <div class="description" ng-show="showDetails && featured.city" ng-bind="featured.city"></div>
-          <div class="description" ng-show="showDetails && featured.location"><a href="https://maps.google.com/maps?q=directions+from+me+to+{{featured.location}}" target="_blank">Directions</a></div>
-          <div class="description" ng-show="showDetails && featured.website"><a href="{{featured.website}}">Website</a></div>
-          <div class="description" ng-show="showDetails && featured.phone" ng-bind="featured.phone"></div>
-          <div class="eventexpanded" ng-show="showDetails">
-            <div ng-show="showDetails" ng-bind-html="featured.details"></div>
-            <div ng-show="showDetails && featured.rsvplink"><a href="{{featured.rsvplink}}">RSVP</a></div>
-            <div ng-show="showDetails && featured.rsvp">RSVP: <span ng-bind="featured.rsvp"></span></div>
-          </div>
+          <!-- left -->
+          <?php if ($left) { ?>
+            <div class="lsidebar">
+              <?php print $left ?>
+            </div><!-- end left -->
+          <?php } ?>
+
+          <!-- right -->
+          <?php if ($right) { ?>
+            <div class="rsidebar">
+              <?php print $right ?>
+            </div><!-- end right -->
+          <?php } ?>
+          
         </div>
         <div class="carousel-nav"></div>
       </div>
 
-      <div id="instagram">
-        <h2><a href="https://instagram.com/nycwhisky/">FOLLOW US ON INSTAGRAM</a></h2>
-        <div id="widget" ng-controller="ShowImages as images">
-          <a ng-repeat="p in pics" href="{{p.link}}">
-            <img ng-src="{{p.images.low_resolution.url}}" title="{{p.caption.text}}" />
-          </a>
-        </div>
-      </div>
     </div>
 
     <div class="c4" id="events">
@@ -110,20 +92,6 @@
         <?php print $content ?>
 
 
-
-        <!-- left -->
-        <?php if ($left) { ?>
-          <div class="lsidebar">
-            <?php print $left ?>
-          </div><!-- end left -->
-        <?php } ?>
-
-        <!-- right -->
-        <?php if ($right) { ?>
-          <div class="rsidebar">
-            <?php print $right ?>
-          </div><!-- end right -->
-        <?php } ?>
 
       </div>
     </div>
